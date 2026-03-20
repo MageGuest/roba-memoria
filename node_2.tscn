@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c2ks6ulfaeuy2"]
+
+[ext_resource type="Texture2D" uid="uid://ddhonaqo0sxly" path="res://gagaga.svg" id="1_yj20n"]
+
+[node name="Node2D" type="Node2D" unique_id=1465989731]
+
+[node name="Gagaga" type="Sprite2D" parent="." unique_id=1832094235]
+position = Vector2(220, 89)
+scale = Vector2(3.59375, 1)
+texture = ExtResource("1_yj20n")
