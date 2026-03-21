@@ -1,0 +1,8 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1774033963
+character_body_2d.gd::GDScript::7667469188908820755::1774033824::0::1::::<>CharacterBody2D<><>0<>0<><>::
+gagaga.svg::CompressedTexture2D::7385152504878422346::1774033818::1774033830::1::::<><><>0<>0<>8804cd37d0ec6abe6294c6bc5801263b<>res://.godot/imported/gagaga.svg-16005460cb3a70ebd41d1bbf4385944c.ctex::
+node_2.tscn::PackedScene::5817072739592989334::1774033830::0::1::::<><><>0<>0<><>::uid://ddhonaqo0sxly::::res://gagaga.svg
+nodos dos.tscn::PackedScene::1101633647378213616::1774033830::0::1::::<><><>0<>0<><>::uid://bbus5ggj0wy58::::res://character_body_2d.gd<>uid://ddhonaqo0sxly::::res://gagaga.svg
+README.md::TextFile::-1::1774033824::0::1::::<><><>0<>0<><>::
+sexysecene.tscn::PackedScene::3925870517198965756::1774033824::0::1::::<><><>0<>0<><>::uid://bbus5ggj0wy58::::res://character_body_2d.gd<>uid://ddhonaqo0sxly::::res://gagaga.svg
