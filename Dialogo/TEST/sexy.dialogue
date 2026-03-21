@@ -1,0 +1,12 @@
+~ start
+Alvanesa Milanesa: How do i open the fridge?.
+- Hands
+	Bob: With your hands
+	Alvanesa Milanesa: WHAT IS THIS SACRED KNOWLEDGE?!
+- Opening it
+	Bob: Opening it
+	Alvanesa Milanesa: Real funny, aren't ya?
+- Say that again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END

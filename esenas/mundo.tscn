@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cvliuia310553" path="res://esenas/pared inbisible.tscn" id="3_i5iem"]
 [ext_resource type="PackedScene" uid="uid://cgodj51dhbbax" path="res://importantes/jugador.tscn" id="3_ny482"]
 [ext_resource type="Texture2D" uid="uid://c3xfya6jmpro4" path="res://spray shit-Sheet-Sheet.png" id="4_ny482"]
+[ext_resource type="PackedScene" uid="uid://r51tsrifnsp3" path="res://alvanesa milanesa.tscn" id="5_3ma15"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny482"]
 texture = ExtResource("4_ny482")
@@ -28,12 +29,13 @@ sources/0 = SubResource("TileSetAtlasSource_ny482")
 
 [node name="mundo" type="Node2D" unique_id=104035157]
 
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1963196312]
+position = Vector2(299, 32)
+tile_map_data = PackedByteArray("AADt//7/AAAAAAAAAADv//7/AAAAAAAAAAD2//7/AAAAAAAAAAD3//7/AAABAAAAAAD3//3/AAABAAAAAAD2//3/AAABAAAAAAD2////AAAAAAAAAAD1////AAAAAAAAAAD3////AAABAAAAAAD2/wAAAAABAAAAAAD1/wAAAAABAAAAAAD0/wAAAAABAAAAAAD0////AAABAAAAAADz////AAABAAAAAADy//7/AAABAAAAAADz//7/AAABAAAAAAD0//7/AAABAAAAAAD0//3/AAABAAAAAADy////AAABAAAAAADy/wAAAAABAAAAAADz/wAAAAABAAAAAAD1//7/AAABAAAAAAD1//3/AAABAAAAAADz//3/AAABAAAAAADy//3/AAABAAAAAADx//7/AAABAAAAAADx////AAABAAAAAADw////AAABAAAAAADw/wAAAAABAAAAAADx/wAAAAABAAAAAADy/wEAAAABAAAAAADz/wEAAAABAAAAAAD0/wEAAAABAAAAAAD1/wEAAAABAAAAAAD2/wEAAAABAAAAAAD3/wAAAAABAAAAAAD0/wIAAAABAAAAAAD1/wIAAAABAAAAAAD2/wIAAAABAAAAAAD3/wEAAAABAAAAAAD4/wEAAAABAAAAAAD5/wEAAAABAAAAAAD4//7/AAABAAAAAAD4////AAABAAAAAAD4/wAAAAABAAAAAAD3/wIAAAABAAAAAAD3/wMAAAABAAAAAAD4/wIAAAABAAAAAAD3//z/AAABAAAAAAD4//z/AAABAAAAAAD4//v/AAABAAAAAAD3//v/AAABAAAAAAD2//z/AAABAAAAAAD1//z/AAABAAAAAAD0//z/AAABAAAAAADz//z/AAABAAAAAADy//z/AAABAAAAAAA=")
+tile_set = SubResource("TileSet_3ma15")
+
 [node name="pared" parent="." unique_id=89753271 instance=ExtResource("1_qlomd")]
 position = Vector2(299, 32)
-
-[node name="TileMapLayer" type="TileMapLayer" parent="pared" unique_id=1963196312]
-tile_map_data = PackedByteArray("AADt//7/AAAAAAAAAADv//7/AAAAAAAAAAD2//7/AAAAAAAAAAD3//7/AAAAAAAAAAD3//3/AAAAAAAAAAD2//3/AAAAAAAAAAD2////AAAAAAAAAAD1////AAAAAAAAAAD3////AAAAAAAAAAD2/wAAAAAAAAAAAAA=")
-tile_set = SubResource("TileSet_3ma15")
 
 [node name="StaticBody2D" parent="." unique_id=225619369 instance=ExtResource("3_i5iem")]
 position = Vector2(-20, 365)
@@ -45,7 +47,11 @@ position = Vector2(325, 365)
 position = Vector2(662, 367)
 
 [node name="Jugador" parent="." unique_id=1859261697 instance=ExtResource("3_ny482")]
-position = Vector2(0, 7)
 
 [node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=363617172]
-zoom = Vector2(5, 5)
+zoom = Vector2(4.5, 4.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 6.5
+
+[node name="Node2D" parent="." unique_id=1289218281 instance=ExtResource("5_3ma15")]
+position = Vector2(-83, 6)

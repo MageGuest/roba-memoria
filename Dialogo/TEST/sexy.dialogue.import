@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bcghrgtfld38a"
+path="res://.godot/imported/sexy.dialogue-c9cfec85c8ec01d63465ad53ef783b22.tres"
+
+[deps]
+
+source_file="res://Dialogo/TEST/sexy.dialogue"
+dest_files=["res://.godot/imported/sexy.dialogue-c9cfec85c8ec01d63465ad53ef783b22.tres"]
+
+[params]
+
+defaults=true

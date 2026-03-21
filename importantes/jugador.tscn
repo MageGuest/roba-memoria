@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cgodj51dhbbax"]
 
-[ext_resource type="Script" uid="uid://4m4eqf38vxxn" path="res://importantes/character_body_2d.gd" id="1_0a6lq"]
-[ext_resource type="Texture2D" uid="uid://cyuo27n47ah47" path="res://normal_adelante_personaje.png" id="2_c2jpn"]
+[ext_resource type="Script" uid="uid://dhigdkqw63sb0" path="res://character_body_2d.gd" id="1_0a6lq"]
+[ext_resource type="Texture2D" uid="uid://bmblyatpjajgt" path="res://Sprites - Santi Valle/personaje principal.png" id="2_0a6lq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3vo1m"]
 resource_name = "e"
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_c2jpn")
+"texture": ExtResource("2_0a6lq")
 }],
 "loop": true,
 "name": &"epico",
@@ -78,23 +78,21 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0wlvr"]
-radius = 8.0
-height = 34.0
+radius = 11.0
+height = 54.0
 
-[node name="Jugador" type="Node2D" unique_id=1859261697]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=209051270]
+[node name="Jugador" type="CharacterBody2D" unique_id=209051270]
 script = ExtResource("1_0a6lq")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1806190199]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1806190199]
 sprite_frames = SubResource("SpriteFrames_3vo1m")
 animation = &"epico"
-offset = Vector2(0.5, 0)
+offset = Vector2(-1, 0)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/AnimatedSprite2D" unique_id=201001944]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D" unique_id=201001944]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_mewwl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=406258060]
-position = Vector2(0, 3)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=406258060]
+position = Vector2(0, -6)
 shape = SubResource("CapsuleShape2D_0wlvr")

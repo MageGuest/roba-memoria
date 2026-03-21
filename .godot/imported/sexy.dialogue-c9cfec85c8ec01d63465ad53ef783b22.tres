@@ -1,0 +1,113 @@
+[gd_resource type="Resource" script_class="DialogueResource" format=3]
+
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_rldgv"]
+
+[resource]
+script = ExtResource("1_rldgv")
+using_states = PackedStringArray()
+titles = {
+"start": "1"
+}
+character_names = PackedStringArray("Alvanesa Milanesa", "Bob", "Nathan")
+first_title = "0"
+lines = {
+"0": {
+&"id": "0",
+&"next_id": "1",
+&"type": "title"
+},
+"1": {
+&"character": "Alvanesa Milanesa",
+&"id": "1",
+&"next_id": "2",
+&"text": "How do i open the fridge?.",
+&"type": "dialogue"
+},
+"10": {
+&"character": "Nathan",
+&"id": "10",
+&"next_id": "11",
+&"text": "For more information see the online documentation.",
+&"type": "dialogue"
+},
+"11": {
+&"id": "11",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"12": {
+&"id": "12",
+&"is_snippet": false,
+&"next_id": "end",
+&"next_id_after": "",
+&"type": "goto"
+},
+"2": {
+&"id": "2",
+&"next_id": "3",
+&"responses": PackedStringArray("2", "5", "8", "9"),
+&"text": "Hands",
+&"type": "response"
+},
+"3": {
+&"character": "Bob",
+&"id": "3",
+&"next_id": "4",
+&"text": "With your hands",
+&"type": "dialogue"
+},
+"4": {
+&"character": "Alvanesa Milanesa",
+&"id": "4",
+&"next_id": "10",
+&"text": "WHAT IS THIS SACRED KNOWLEDGE?!",
+&"type": "dialogue"
+},
+"5": {
+&"id": "5",
+&"next_id": "6",
+&"text": "Opening it",
+&"type": "response"
+},
+"6": {
+&"character": "Bob",
+&"id": "6",
+&"next_id": "7",
+&"text": "Opening it",
+&"type": "dialogue"
+},
+"7": {
+&"character": "Alvanesa Milanesa",
+&"id": "7",
+&"next_id": "10",
+&"text": "Real funny, aren't ya?",
+&"type": "dialogue"
+},
+"8": {
+&"id": "8",
+&"next_id": "1",
+&"text": "Say that again",
+&"type": "response"
+},
+"9": {
+&"id": "9",
+&"next_id": "end",
+&"text": "End the conversation",
+&"type": "response"
+}
+}
+raw_text = "~ start
+Alvanesa Milanesa: How do i open the fridge?.
+- Hands
+	Bob: With your hands
+	Alvanesa Milanesa: WHAT IS THIS SACRED KNOWLEDGE?!
+- Opening it
+	Bob: Opening it
+	Alvanesa Milanesa: Real funny, aren't ya?
+- Say that again => start
+- End the conversation => END
+Nathan: For more information see the online documentation.
+=> END"
+metadata/dialogue_manager_version = "3.10.2"
