@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b4bk8x40p8hd7"]
+
+[ext_resource type="Texture2D" uid="uid://dyte4bsxcoom4" path="res://New Piskel (1).png" id="1_xpphr"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1754528979]
+texture = ExtResource("1_xpphr")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="." unique_id=1621793291]
+position = Vector2(90, 0)
+texture = ExtResource("1_xpphr")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=627152114]
+position = Vector2(179, 0)
+texture = ExtResource("1_xpphr")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="Sprite2D" unique_id=47646253]
+position = Vector2(90, 0)
+texture = ExtResource("1_xpphr")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1545836209]
+z_index = -5
+position = Vector2(0, 90)
+texture = ExtResource("1_xpphr")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="Sprite2D2" unique_id=1405939078]
+position = Vector2(90, 0)
+texture = ExtResource("1_xpphr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2" unique_id=737557873]
+position = Vector2(179, 0)
+texture = ExtResource("1_xpphr")
+
+[node name="NewPiskel(1)" type="Sprite2D" parent="Sprite2D2/Sprite2D" unique_id=984113497]
+position = Vector2(90, 0)
+texture = ExtResource("1_xpphr")

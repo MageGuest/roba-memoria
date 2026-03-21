@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj0bhp704p4sq"]
+
+[ext_resource type="PackedScene" uid="uid://bv6yrqaa1fil5" path="res://esenas/sexysecene.tscn" id="1_57gmm"]
+[ext_resource type="Texture2D" uid="uid://cyuo27n47ah47" path="res://normal_adelante_personaje.png" id="2_xsoes"]
+
+[node name="Node2D" unique_id=1620607215 instance=ExtResource("1_57gmm")]
+z_index = 4
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" parent_id_path=PackedInt32Array(1024885995) index="0" unique_id=1763448574]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" parent="CharacterBody2D" parent_id_path=PackedInt32Array(1024885995) index="1" unique_id=466938865]
+position = Vector2(0, 0)
+scale = Vector2(4.1562505, 4.1562505)
+texture = ExtResource("2_xsoes")
+
+[node name="CollisionShape2D" parent="CharacterBody2D" parent_id_path=PackedInt32Array(1024885995) index="2" unique_id=209528873]
+position = Vector2(-3.5, 12.5)
+metadata/_edit_group_ = true
