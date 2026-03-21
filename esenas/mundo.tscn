@@ -1,17 +1,39 @@
-[gd_scene format=3 uid="uid://c5fr4rarrgsgm"]
+[gd_scene format=4 uid="uid://c5fr4rarrgsgm"]
 
 [ext_resource type="PackedScene" uid="uid://bjqqecul8hjb7" path="res://esenas/pared.tscn" id="1_qlomd"]
-[ext_resource type="PackedScene" uid="uid://bj0bhp704p4sq" path="res://esenas/node_2da.tscn" id="2_fo3i7"]
 [ext_resource type="PackedScene" uid="uid://cvliuia310553" path="res://esenas/pared inbisible.tscn" id="3_i5iem"]
-[ext_resource type="PackedScene" uid="uid://b4bk8x40p8hd7" path="res://esenas/piso.tscn" id="4_ny482"]
+[ext_resource type="PackedScene" uid="uid://cgodj51dhbbax" path="res://importantes/jugador.tscn" id="3_ny482"]
+[ext_resource type="Texture2D" uid="uid://c3xfya6jmpro4" path="res://spray shit-Sheet-Sheet.png" id="4_ny482"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ny482"]
+texture = ExtResource("4_ny482")
+separation = Vector2i(32, 32)
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_3ma15"]
+tile_size = Vector2i(32, 32)
+sources/0 = SubResource("TileSetAtlasSource_ny482")
 
 [node name="mundo" type="Node2D" unique_id=104035157]
 
-[node name="Node2D" parent="." unique_id=1620607215 instance=ExtResource("2_fo3i7")]
-position = Vector2(-79, 78)
-
 [node name="pared" parent="." unique_id=89753271 instance=ExtResource("1_qlomd")]
 position = Vector2(299, 32)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="pared" unique_id=1963196312]
+tile_map_data = PackedByteArray("AADt//7/AAAAAAAAAADv//7/AAAAAAAAAAD2//7/AAAAAAAAAAD3//7/AAAAAAAAAAD3//3/AAAAAAAAAAD2//3/AAAAAAAAAAD2////AAAAAAAAAAD1////AAAAAAAAAAD3////AAAAAAAAAAD2/wAAAAAAAAAAAAA=")
+tile_set = SubResource("TileSet_3ma15")
 
 [node name="StaticBody2D" parent="." unique_id=225619369 instance=ExtResource("3_i5iem")]
 position = Vector2(-20, 365)
@@ -22,8 +44,8 @@ position = Vector2(325, 365)
 [node name="StaticBody2D3" parent="." unique_id=1048359922 instance=ExtResource("3_i5iem")]
 position = Vector2(662, 367)
 
-[node name="Sprite2D" parent="." unique_id=1754528979 instance=ExtResource("4_ny482")]
-position = Vector2(104, 149)
+[node name="Jugador" parent="." unique_id=1859261697 instance=ExtResource("3_ny482")]
+position = Vector2(0, 7)
 
-[node name="Sprite2D2" parent="." unique_id=1845190211 instance=ExtResource("4_ny482")]
-position = Vector2(464, 150)
+[node name="Camera2D" type="Camera2D" parent="Jugador" unique_id=363617172]
+zoom = Vector2(5, 5)

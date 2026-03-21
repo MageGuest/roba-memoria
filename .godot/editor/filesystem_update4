@@ -1,2 +1,4 @@
-res://sexysecene.tscn
-res://character_body_2d.gd
+res://esenas/mundo.tscn
+res://esenas/sexysecene.tscn
+res://importantes/jugador.tscn
+res://importantes/character_body_2d.gd

@@ -1,8 +1,17 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774033963
-character_body_2d.gd::GDScript::7667469188908820755::1774033824::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://::1774114280
+character_body_2d.gd::GDScript::7667469188908820755::1774112304::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character_body_2d.tscn::PackedScene::8677367114040505378::1774112304::0::1::::<><><>0<>0<><>::uid://ddhonaqo0sxly::::res://gagaga.svg<>res://jugador.gd
 gagaga.svg::CompressedTexture2D::7385152504878422346::1774033818::1774033830::1::::<><><>0<>0<>8804cd37d0ec6abe6294c6bc5801263b<>res://.godot/imported/gagaga.svg-16005460cb3a70ebd41d1bbf4385944c.ctex::
-node_2.tscn::PackedScene::5817072739592989334::1774033830::0::1::::<><><>0<>0<><>::uid://ddhonaqo0sxly::::res://gagaga.svg
-nodos dos.tscn::PackedScene::1101633647378213616::1774033830::0::1::::<><><>0<>0<><>::uid://bbus5ggj0wy58::::res://character_body_2d.gd<>uid://ddhonaqo0sxly::::res://gagaga.svg
-README.md::TextFile::-1::1774033824::0::1::::<><><>0<>0<><>::
-sexysecene.tscn::PackedScene::3925870517198965756::1774033824::0::1::::<><><>0<>0<><>::uid://bbus5ggj0wy58::::res://character_body_2d.gd<>uid://ddhonaqo0sxly::::res://gagaga.svg
+New Piskel (1).png::CompressedTexture2D::8883312213091607901::1774112304::1774112543::1::::<><><>0<>0<>a91760ce65b7143f29e47d0eed96d94f<>res://.godot/imported/New Piskel (1).png-aa190bd7eaf77cd10e10a600010083f1.ctex::
+New Piskel (2).png::CompressedTexture2D::3949190317993079804::1774112304::1774112543::1::::<><><>0<>0<>119bac4fc16242507acd106f55c2b1f0<>res://.godot/imported/New Piskel (2).png-3d24c5253c61fed48c994c32af58f107.ctex::
+New Piskel (3).png::CompressedTexture2D::3014029313182962558::1774112304::1774112543::1::::<><><>0<>0<>01f14e441aeee339a72914cdd8a74226<>res://.godot/imported/New Piskel (3).png-cc6b69ada80995fb87eae09a0be2517c.ctex::
+normal_adelante_personaje.png::CompressedTexture2D::6499561126304398710::1774112304::1774112543::1::::<><><>0<>0<>85734809e6d9593a240a7a0e94efd4a1<>res://.godot/imported/normal_adelante_personaje.png-4e494f175fb350a4183fba702c5cdeea.ctex::
+README.md::TextFile::-1::1774112304::0::1::::<><><>0<>0<><>::
+spray shit-Sheet-Sheet.png::CompressedTexture2D::6785956169926534997::1774114279::1774114280::1::::<><><>0<>0<>b41d6635137f6d653ca4bcb8863156c7<>res://.godot/imported/spray shit-Sheet-Sheet.png-8185c85bca2a01ecdc2ea653802f4c2b.ctex::
+::res://esenas/::1774114753
+mundo.tscn::PackedScene::6889913435890073600::1774114778::0::1::::<><><>0<>0<><>::uid://bjqqecul8hjb7::::res://esenas/pared.tscn<>uid://bj0bhp704p4sq::::res://esenas/node_2da.tscn<>uid://cvliuia310553::::res://esenas/pared inbisible.tscn<>uid://c3xfya6jmpro4::::res://spray shit-Sheet-Sheet.png
+node_2da.tscn::PackedScene::3069803776296244176::1774112304::0::1::::<><><>0<>0<><>::uid://bv6yrqaa1fil5::::res://esenas/sexysecene.tscn<>uid://cyuo27n47ah47::::res://normal_adelante_personaje.png
+pared inbisible.tscn::PackedScene::6270037112394525432::1774112304::0::1::::<><><>0<>0<><>::
+pared.tscn::PackedScene::3052129072047194894::1774112304::0::1::::<><><>0<>0<><>::uid://bi7avfsdscpja::::res://New Piskel (3).png
+sexysecene.tscn::PackedScene::3925870517198965756::1774112520::0::1::::<><><>0<>0<><>::uid://dhigdkqw63sb0::::res://character_body_2d.gd<>uid://ddhonaqo0sxly::::res://gagaga.svg

@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://cgodj51dhbbax"]
+
+[ext_resource type="Script" uid="uid://4m4eqf38vxxn" path="res://importantes/character_body_2d.gd" id="1_0a6lq"]
+[ext_resource type="Texture2D" uid="uid://cyuo27n47ah47" path="res://normal_adelante_personaje.png" id="2_c2jpn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3vo1m"]
+resource_name = "e"
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_c2jpn")
+}],
+"loop": true,
+"name": &"epico",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_bcvyu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_3fp4f"]
+resource_name = "jiggle physics"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.06666667, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.17453292519943295, -0.17453292519943295]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mewwl"]
+_data = {
+&"RESET": SubResource("Animation_bcvyu"),
+&"jiggle physics": SubResource("Animation_3fp4f")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0wlvr"]
+radius = 8.0
+height = 34.0
+
+[node name="Jugador" type="Node2D" unique_id=1859261697]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=209051270]
+script = ExtResource("1_0a6lq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1806190199]
+sprite_frames = SubResource("SpriteFrames_3vo1m")
+animation = &"epico"
+offset = Vector2(0.5, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/AnimatedSprite2D" unique_id=201001944]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_mewwl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=406258060]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_0wlvr")
