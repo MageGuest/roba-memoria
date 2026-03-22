@@ -79,7 +79,7 @@ _data = {
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0wlvr"]
 radius = 11.0
-height = 54.0
+height = 50.0
 
 [node name="Jugador" type="CharacterBody2D" unique_id=209051270]
 script = ExtResource("1_0a6lq")
@@ -94,5 +94,5 @@ root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_mewwl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=406258060]
-position = Vector2(0, -6)
+position = Vector2(0, -4)
 shape = SubResource("CapsuleShape2D_0wlvr")

@@ -11,16 +11,13 @@ height = 24.0
 resource_name = "sexy"
 script/source = "extends Area2D
 @onready var F_keyy = $F_key
-@onready var AnimationKey = $F_key/AnimationPlayer
 var is_player_close
 
-
-func _on_body_entered(body):
+func _on_area_entered(area):
 	F_keyy.visible = true
 	print(\"hello\")
 	is_player_close = true
-	AnimationKey.play(\"uwu\")
-func _on_body_exited(body):
+func _on_area_exited(area):
 	F_keyy.visible = false
 	is_player_close = false
 	
@@ -120,5 +117,3 @@ texture = ExtResource("1_v40ui")
 
 [connection signal="area_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_exited"]
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_exited"]

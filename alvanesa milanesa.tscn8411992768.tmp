@@ -10,20 +10,16 @@ height = 24.0
 [sub_resource type="GDScript" id="GDScript_v40ui"]
 resource_name = "sexy"
 script/source = "extends Area2D
-@onready var F_keyy = $F_key
-@onready var AnimationKey = $F_key/AnimationPlayer
+@onready var f_keyword = $F_key
 var is_player_close
 
-
-func _on_body_entered(body):
-	F_keyy.visible = true
+func _on_area_entered(area):
+	f_keyword.visible = true
 	print(\"hello\")
 	is_player_close = true
-	AnimationKey.play(\"uwu\")
-func _on_body_exited(body):
-	F_keyy.visible = false
+func _on_area_exited(area):
+	f_keyword.visible = false
 	is_player_close = false
-	
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v40ui"]
@@ -120,5 +116,3 @@ texture = ExtResource("1_v40ui")
 
 [connection signal="area_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_entered"]
 [connection signal="area_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_exited"]
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_exited"]

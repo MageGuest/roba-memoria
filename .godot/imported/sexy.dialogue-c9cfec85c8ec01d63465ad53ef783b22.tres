@@ -8,7 +8,7 @@ using_states = PackedStringArray()
 titles = {
 "start": "1"
 }
-character_names = PackedStringArray("Alvanesa Milanesa", "Bob", "Nathan")
+character_names = PackedStringArray("Alvanesa Milanesa", "Bob")
 first_title = "0"
 lines = {
 "0": {
@@ -24,7 +24,7 @@ lines = {
 &"type": "dialogue"
 },
 "10": {
-&"character": "Nathan",
+&"character": "Alvanesa Milanesa",
 &"id": "10",
 &"next_id": "11",
 &"text": "For more information see the online documentation.",
@@ -108,6 +108,6 @@ Alvanesa Milanesa: How do i open the fridge?.
 	Alvanesa Milanesa: Real funny, aren't ya?
 - Say that again => start
 - End the conversation => END
-Nathan: For more information see the online documentation.
+Alvanesa Milanesa: For more information see the online documentation.
 => END"
 metadata/dialogue_manager_version = "3.10.2"

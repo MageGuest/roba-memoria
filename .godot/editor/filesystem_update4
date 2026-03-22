@@ -1,5 +1,4 @@
 res://importantes/jugador.tscn
-res://esenas/mundo.tscn
-res://importantes/character_body_2d.gd
-res://character_body_2d.gd
 res://alvanesa milanesa.tscn
+res://esenas/mundo.tscn
+res://character_body_2d.gd

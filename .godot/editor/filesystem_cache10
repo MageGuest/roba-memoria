@@ -1,8 +1,8 @@
-63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774130429
+f098f8d3115d962055284dee314b4f89
+::res://::1774138225
 adelante V2.png::CompressedTexture2D::6845807462550618552::1774128978::1774128978::1::::<><><>0<>0<>18d7766dad570b826017d23086002eda<>res://.godot/imported/adelante V2.png-a65725aabbdf6b8a7c5f38f340a8438d.ctex::
-alvanesa milanesa.tscn::PackedScene::1256755218417139930::1774129818::0::1::::<><><>0<>0<><>::uid://c4sfpiyu82ram::::res://adelante V2.png
-character_body_2d.gd::GDScript::7667469188908820755::1774129592::0::1::::<>CharacterBody2D<><>0<>0<><>::
+alvanesa milanesa.tscn::PackedScene::1256755218417139930::1774138225::0::1::::<><><>0<>0<><>::uid://c4sfpiyu82ram::::res://adelante V2.png
+character_body_2d.gd::GDScript::7667469188908820755::1774138045::0::1::::<>CharacterBody2D<><>0<>0<><>::
 character_body_2d.tscn::PackedScene::8677367114040505378::1774112304::0::1::::<><><>0<>0<><>::uid://ddhonaqo0sxly::::res://gagaga.svg<>res://jugador.gd
 gagaga.svg::CompressedTexture2D::7385152504878422346::1774033818::1774033830::1::::<><><>0<>0<>8804cd37d0ec6abe6294c6bc5801263b<>res://.godot/imported/gagaga.svg-16005460cb3a70ebd41d1bbf4385944c.ctex::
 New Piskel (1).png::CompressedTexture2D::8883312213091607901::1774112304::1774112543::1::::<><><>0<>0<>a91760ce65b7143f29e47d0eed96d94f<>res://.godot/imported/New Piskel (1).png-aa190bd7eaf77cd10e10a600010083f1.ctex::
@@ -89,15 +89,16 @@ find_in_dialogue_view.tscn::PackedScene::1783514634430556025::1774129912::0::1::
 main_view.gd::GDScript::5365867961863611872::1774129912::0::1::::<>Control<><>0<>1<><>::
 main_view.tscn::PackedScene::4884668666408697448::1774129912::0::1::::<><><>0<>0<><>::uid://cipjcc7bkh1pc::::res://addons/dialogue_manager/views/main_view.gd<>uid://civ6shmka5e8u::::res://addons/dialogue_manager/components/code_edit.tscn<>uid://dnufpcdrreva3::::res://addons/dialogue_manager/components/files_list.tscn<>uid://ctns6ouwwd68i::::res://addons/dialogue_manager/components/title_list.tscn<>uid://co8yl23idiwbi::::res://addons/dialogue_manager/components/update_button.tscn<>uid://gr8nakpbrhby::::res://addons/dialogue_manager/components/search_and_replace.tscn<>uid://cs8pwrxr5vxix::::res://addons/dialogue_manager/components/errors_panel.tscn<>uid://klpiq4tk3t7a::::res://addons/dialogue_manager/components/code_edit_syntax_highlighter.gd<>uid://cnm67htuohhlo::::res://addons/dialogue_manager/assets/banner.png
 ::res://Dialogo/::1774130432
-::res://Dialogo/TEST/::1774130436
-sexy.dialogue::Resource::2539640359672685946::1774130593::1774130593::1::::<><><>0<>0<>5031a07bfcf9f1427201d6036c55c00d<>res://.godot/imported/sexy.dialogue-c9cfec85c8ec01d63465ad53ef783b22.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
-::res://esenas/::1774129626
-mundo.tscn::PackedScene::6889913435890073600::1774130593::0::1::::<><><>0<>0<><>::uid://bjqqecul8hjb7::::res://esenas/pared.tscn<>uid://cvliuia310553::::res://esenas/pared inbisible.tscn<>uid://cgodj51dhbbax::::res://importantes/jugador.tscn<>uid://c3xfya6jmpro4::::res://spray shit-Sheet-Sheet.png<>uid://r51tsrifnsp3::::res://alvanesa milanesa.tscn
+::res://Dialogo/TEST/::1774137277
+sexy.dialogue::Resource::2539640359672685946::1774137277::1774137277::1::::<><><>0<>0<>5031a07bfcf9f1427201d6036c55c00d<>res://.godot/imported/sexy.dialogue-c9cfec85c8ec01d63465ad53ef783b22.tres::uid://dbs4435dsf3ry::::res://addons/dialogue_manager/dialogue_resource.gd
+::res://esenas/::1774137491
+mundo.tscn::PackedScene::6889913435890073600::1774137491::0::1::::<><><>0<>0<><>::uid://bjqqecul8hjb7::::res://esenas/pared.tscn<>uid://cvliuia310553::::res://esenas/pared inbisible.tscn<>uid://cgodj51dhbbax::::res://importantes/jugador.tscn<>uid://c3xfya6jmpro4::::res://spray shit-Sheet-Sheet.png<>uid://r51tsrifnsp3::::res://alvanesa milanesa.tscn
 pared inbisible.tscn::PackedScene::6270037112394525432::1774112304::0::1::::<><><>0<>0<><>::
 pared.tscn::PackedScene::3052129072047194894::1774112304::0::1::::<><><>0<>0<><>::uid://bi7avfsdscpja::::res://New Piskel (3).png
-::res://importantes/::1774129577
+::res://importantes/::1774137432
 character_body_2d.gd::GDScript::2062017783932271599::1774129258::0::1::::<>CharacterBody2D<><>0<>0<><>::
-jugador.tscn::PackedScene::5223075556905796979::1774129577::0::1::::<><><>0<>0<><>::uid://dhigdkqw63sb0::::res://character_body_2d.gd<>uid://bmblyatpjajgt::::res://Sprites - Santi Valle/personaje principal.png
-::res://Sprites - Santi Valle/::1774129097
+jugador.tscn::PackedScene::5223075556905796979::1774137432::0::1::::<><><>0<>0<><>::uid://dhigdkqw63sb0::::res://character_body_2d.gd<>uid://bmblyatpjajgt::::res://Sprites - Santi Valle/personaje principal.png
+::res://Sprites - Santi Valle/::1774138667
 normal_adelante_personaje.png::CompressedTexture2D::6499561126304398710::1774112304::1774129004::1::::<><><>0<>0<>74ab83187070e7e0670f2156178ae9f6<>res://.godot/imported/normal_adelante_personaje.png-f56d787dd35dfda32f2c6294ee20d2ec.ctex::
 personaje principal.png::CompressedTexture2D::3231461961122550963::1774129079::1774129091::1::::<><><>0<>0<>3f8e42ff48191cf1f5f09c60f109473a<>res://.godot/imported/personaje principal.png-5e852a87563a76ce80b7704432408c0c.ctex::
+Tecla F.png::CompressedTexture2D::7447353768835506330::1774138667::1774138668::1::::<><><>0<>0<>0cb262da3a2b9e3a4b13875d3e529568<>res://.godot/imported/Tecla F.png-dbee759feec5794baca4657f56de72f8.ctex::
