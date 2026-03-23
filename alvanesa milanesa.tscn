@@ -3,26 +3,33 @@
 [ext_resource type="Texture2D" uid="uid://deds3f0nlnyys" path="res://Sprites - Santi Valle/Tecla F.png" id="1_sr11q"]
 [ext_resource type="Texture2D" uid="uid://c4sfpiyu82ram" path="res://adelante V2.png" id="1_v40ui"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v40ui"]
-radius = 12.0
-height = 24.0
-
 [sub_resource type="GDScript" id="GDScript_v40ui"]
 resource_name = "sexy"
 script/source = "extends Area2D
 @onready var F_keyy = $F_key
 @onready var AnimationKey = $F_key/AnimationPlayer
-var is_player_close
+var is_player_close = false
+const AlvaDialogo1 = preload(\"res://Dialogo/TEST/sexy.dialogue\")
+var DialogueOn = false
 
-
+func _physics_process(delta):
+	if is_player_close and Input.is_action_just_pressed(\"ui_accept\") and DialogueOn == false:
+		DialogueManager.show_dialogue_balloon(AlvaDialogo1, \"start\")
+		print(\"hello moto\")
+		DialogueOn = true
 func _on_body_entered(body):
 	F_keyy.visible = true
 	print(\"hello\")
 	is_player_close = true
+	if is_player_close == true:
+		print(\"is_player_close\")
 	AnimationKey.play(\"uwu\")
 func _on_body_exited(body):
 	F_keyy.visible = false
 	is_player_close = false
+	
+	
+
 	
 "
 
@@ -58,7 +65,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_jridr"]
 resource_name = "uwu"
-length = 1.32
+length = 1.4666667
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -79,10 +86,10 @@ tracks/1/path = NodePath(".:offset")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.33333334, 0.66, 0.99, 1.32),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.4, 0.8, 1.12),
+"transitions": PackedFloat32Array(10, 10, 10, 10),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(0, 8), Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
+"values": [Vector2(0, 0), Vector2(0, 8), Vector2(0, 0), Vector2(0, -8)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ygf0t"]
@@ -91,34 +98,38 @@ _data = {
 &"uwu": SubResource("Animation_jridr")
 }
 
-[node name="Alvanesa" type="Node2D" unique_id=1289218281]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v40ui"]
+radius = 12.0
+height = 24.0
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1361680059]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=807901156]
-position = Vector2(1, -2)
-shape = SubResource("CapsuleShape2D_v40ui")
-
-[node name="Area2D" type="Area2D" parent="StaticBody2D" unique_id=687675554]
+[node name="Area2D" type="Area2D" unique_id=687675554]
 script = SubResource("GDScript_v40ui")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Area2D" unique_id=1227048883]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1227048883]
 position = Vector2(0, -5.5)
 shape = SubResource("RectangleShape2D_v40ui")
 
-[node name="F_key" type="Sprite2D" parent="StaticBody2D/Area2D" unique_id=971308171]
+[node name="F_key" type="Sprite2D" parent="." unique_id=971308171]
 position = Vector2(1, -47)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_sr11q")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D/Area2D/F_key" unique_id=159729538]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="F_key" unique_id=159729538]
 libraries/ = SubResource("AnimationLibrary_ygf0t")
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=7060596]
+[node name="Alvanesa" type="Node2D" parent="." unique_id=1289218281]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Alvanesa" unique_id=1361680059]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alvanesa/StaticBody2D" unique_id=807901156]
+position = Vector2(1, -2)
+shape = SubResource("CapsuleShape2D_v40ui")
+
+[node name="Sprite2D" type="Sprite2D" parent="Alvanesa/StaticBody2D" unique_id=7060596]
 z_index = 50
 texture = ExtResource("1_v40ui")
 
-[connection signal="area_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_entered"]
-[connection signal="area_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_area_exited"]
-[connection signal="body_entered" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_entered"]
-[connection signal="body_exited" from="StaticBody2D/Area2D" to="StaticBody2D/Area2D" method="_on_body_exited"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

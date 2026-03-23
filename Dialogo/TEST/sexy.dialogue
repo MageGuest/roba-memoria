@@ -1,12 +1,16 @@
 ~ start
 Alvanesa Milanesa: How do i open the fridge?.
+#if{{Game_Manager.MajoRelation}} 
 - Hands
+	if GameManager.MajoFriend:
+		hell yeah
 	Bob: With your hands
 	Alvanesa Milanesa: WHAT IS THIS SACRED KNOWLEDGE?!
+	set GameManager.MajoFriend = true
 - Opening it
 	Bob: Opening it
 	Alvanesa Milanesa: Real funny, aren't ya?
 - Say that again => start
 - End the conversation => END
 Alvanesa Milanesa: For more information see the online documentation.
-=> END
+=> start

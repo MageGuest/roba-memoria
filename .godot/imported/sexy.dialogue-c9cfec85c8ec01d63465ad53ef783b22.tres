@@ -19,26 +19,52 @@ lines = {
 "1": {
 &"character": "Alvanesa Milanesa",
 &"id": "1",
-&"next_id": "2",
+&"next_id": "3",
 &"text": "How do i open the fridge?.",
 &"type": "dialogue"
 },
 "10": {
-&"character": "Alvanesa Milanesa",
+&"character": "Bob",
 &"id": "10",
 &"next_id": "11",
-&"text": "For more information see the online documentation.",
+&"text": "Opening it",
 &"type": "dialogue"
 },
 "11": {
+&"character": "Alvanesa Milanesa",
 &"id": "11",
-&"is_snippet": false,
-&"next_id": "end",
-&"next_id_after": "",
-&"type": "goto"
+&"next_id": "14",
+&"text": "Real funny, aren't ya?",
+&"type": "dialogue"
 },
 "12": {
 &"id": "12",
+&"next_id": "1",
+&"text": "Say that again",
+&"type": "response"
+},
+"13": {
+&"id": "13",
+&"next_id": "end",
+&"text": "End the conversation",
+&"type": "response"
+},
+"14": {
+&"character": "Alvanesa Milanesa",
+&"id": "14",
+&"next_id": "15",
+&"text": "For more information see the online documentation.",
+&"type": "dialogue"
+},
+"15": {
+&"id": "15",
+&"is_snippet": false,
+&"next_id": "1",
+&"next_id_after": "",
+&"type": "goto"
+},
+"16": {
+&"id": "16",
 &"is_snippet": false,
 &"next_id": "end",
 &"next_id_after": "",
@@ -47,67 +73,104 @@ lines = {
 "2": {
 &"id": "2",
 &"next_id": "3",
-&"responses": PackedStringArray("2", "5", "8", "9"),
+&"type": ""
+},
+"3": {
+&"id": "3",
+&"next_id": "4",
+&"responses": PackedStringArray("3", "9", "12", "13"),
 &"text": "Hands",
 &"type": "response"
 },
-"3": {
-&"character": "Bob",
-&"id": "3",
-&"next_id": "4",
-&"text": "With your hands",
-&"type": "dialogue"
-},
 "4": {
-&"character": "Alvanesa Milanesa",
+&"condition": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "GameManager"
+}, {
+&"i": 15,
+&"type": &"dot"
+}, {
+&"i": 16,
+&"type": &"variable",
+&"value": "MajoFriend"
+}])
+},
 &"id": "4",
-&"next_id": "10",
-&"text": "WHAT IS THIS SACRED KNOWLEDGE?!",
-&"type": "dialogue"
+&"next_id": "5",
+&"next_id_after": "6",
+&"type": "condition"
 },
 "5": {
 &"id": "5",
 &"next_id": "6",
-&"text": "Opening it",
-&"type": "response"
+&"text": "hell yeah",
+&"type": "dialogue"
 },
 "6": {
 &"character": "Bob",
 &"id": "6",
 &"next_id": "7",
-&"text": "Opening it",
+&"text": "With your hands",
 &"type": "dialogue"
 },
 "7": {
 &"character": "Alvanesa Milanesa",
 &"id": "7",
-&"next_id": "10",
-&"text": "Real funny, aren't ya?",
+&"next_id": "8",
+&"text": "WHAT IS THIS SACRED KNOWLEDGE?!",
 &"type": "dialogue"
 },
 "8": {
 &"id": "8",
-&"next_id": "1",
-&"text": "Say that again",
-&"type": "response"
+&"mutation": {
+&"expression": Array[Dictionary]([{
+&"i": 4,
+&"type": &"variable",
+&"value": "GameManager"
+}, {
+&"i": 15,
+&"type": &"dot"
+}, {
+&"i": 16,
+&"type": &"variable",
+&"value": "MajoFriend"
+}, {
+&"i": 27,
+&"type": &"assignment",
+&"value": "="
+}, {
+&"i": 29,
+&"type": &"variable",
+&"value": "true"
+}]),
+&"is_blocking": true
+},
+&"next_id": "14",
+&"type": "mutation"
 },
 "9": {
 &"id": "9",
-&"next_id": "end",
-&"text": "End the conversation",
+&"next_id": "10",
+&"text": "Opening it",
 &"type": "response"
 }
 }
 raw_text = "~ start
 Alvanesa Milanesa: How do i open the fridge?.
+#if{{Game_Manager.MajoRelation}} 
 - Hands
+	if GameManager.MajoFriend:
+		hell yeah
 	Bob: With your hands
 	Alvanesa Milanesa: WHAT IS THIS SACRED KNOWLEDGE?!
+	set GameManager.MajoFriend = true
 - Opening it
 	Bob: Opening it
 	Alvanesa Milanesa: Real funny, aren't ya?
 - Say that again => start
 - End the conversation => END
 Alvanesa Milanesa: For more information see the online documentation.
-=> END"
+=> start"
 metadata/dialogue_manager_version = "3.10.2"
